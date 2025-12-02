@@ -257,7 +257,6 @@ npm run type-check
 MIT License - Feel free to use this project for learning and development.
 
 ## 👨‍💻 Author
-ADITYA PRIYADARSHI
 
 Created as a software engineering project demonstrating modern web development practices.
 
