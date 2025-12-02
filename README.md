@@ -1,6 +1,6 @@
 ## Project info
 
-Deployment URL: https://atm-system-theta.vercel.app/
+Deployment URL: https://atm-system-seven.vercel.app/
 
 Follow these steps:
 
