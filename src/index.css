@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ATM Banking System Design System - Professional & Secure */
+
+@layer base {
+  :root {
+    --background: 210 100% 97%;
+    --foreground: 220 40% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 10%;
+
+    /* Banking Blue - Professional & Trustworthy */
+    --primary: 210 90% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 90% 55%;
+
+    /* Teal Accent - Modern & Fresh */
+    --secondary: 180 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 20% 50%;
+
+    --accent: 180 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 220 20% 85%;
+    --input: 220 20% 90%;
+    --ring: 210 90% 45%;
+
+    --radius: 0.75rem;
+
+    /* ATM Specific Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(210 90% 45%), hsl(210 90% 55%));
+    --gradient-background: linear-gradient(180deg, hsl(210 100% 97%), hsl(200 80% 95%));
+    --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+    
+    --shadow-card: 0 10px 30px -5px hsl(210 90% 45% / 0.15);
+    --shadow-button: 0 4px 12px -2px hsl(210 90% 45% / 0.25);
+    --shadow-glow: 0 0 30px hsl(210 90% 55% / 0.3);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-[hsl(210,100%,97%)] to-[hsl(200,80%,95%)] text-foreground;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_10px_30px_-5px_hsl(210,90%,45%,0.15)];
+  }
+
+  .atm-button {
+    @apply transition-all duration-300 shadow-[0_4px_12px_-2px_hsl(210,90%,45%,0.25)] hover:shadow-[0_6px_16px_-2px_hsl(210,90%,45%,0.35)] hover:scale-105 active:scale-95;
+  }
+
+  .pin-input {
+    @apply w-12 h-12 text-center text-2xl font-semibold border-2 border-primary/30 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all;
+  }
+
+  .transaction-item {
+    @apply p-4 glass-card rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-[1.02];
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(210 90% 55% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(210 90% 55% / 0.5);
+  }
+}
