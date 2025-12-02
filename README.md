@@ -1,7 +1,5 @@
 ## Project info
 
-**URL**: https://lovable.dev/projects/d44ef049-7636-4b45-93ff-fab952fe536f
-
 Follow these steps:
 
 ```sh
